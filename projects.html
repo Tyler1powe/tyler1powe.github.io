@@ -47,8 +47,77 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
-                                            <h2 class="fw-bolder">Project Name 1</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
+                                            <h2 class="fw-bolder">Grade Average Calculator</h2>
+                                            <p> HTML <br>
+                                                "<!doctype html>
+<html lang="en">
+<head>
+  <title>  </title>
+  <link rel="stylesheet" href="hw03.css"> 
+</head>
+<body>
+<h1> Homework 3 - Weighted Average</h1>
+
+<form action="hw3_results.php" method="post">
+  
+<section id="Instructions">
+     <h2>Instructions</h2>  
+    Enter in your grades in the area below.
+    <br><br>
+    Name:<input type="text" name="name">
+<br><br>
+         <input type="submit" value="Calculate">
+</section>
+<section id="Exams">
+    Exam 1:<input type="text" name="exam1">
+<br><br>
+    Exam 2:<input type="text" name="exam2">
+    <br><br>
+    Exam 3:<input type="text" name="exam3">
+</section>
+<section id="Homeworks"> 
+    Homework 1:<input type="text" name="homework1">
+<br><br>
+    Homework 2:<input type="text" name="homework2">
+<br><br>
+    Homework 3:<input type="text" name="homework3">    
+<br><br>
+    Homework 4:<input type="text" name="homework4">
+<br><br>
+    Homework 5:<input type="text" name="homework5">
+</section>
+</form>
+
+</body>
+</html>" <br>
+                                                PHP <br>
+                                                 "<?
+   //input
+   $name = $_POST['name'];
+   
+   $exam1 = $_POST['exam1'];
+   $exam2 = $_POST['exam2'];
+   $exam3 = $_POST['exam3'];
+   
+   $homework1 = $_POST['homework1'];
+   $homework2 = $_POST['homework2'];
+   $homework3 = $_POST['homework3'];
+   $homework4 = $_POST['homework4'];
+   $homework5 = $_POST['homework5'];
+      
+      //process
+      $exam_average = $exam1+$exam2+$exam3/3;
+      $homework_average = $homework1+$homework2+$homework3+$homework4+$homework5/5;
+      $final_average = ($exam_average*0.85)+($homework_average*0.15)/2;
+       
+    print" <h1> Homework 3 - Grade report for $name </h1>
+            <h2> Your final average is: ".number_format($final_average,2)." </h2>
+            Exam Average: ".number_format($exam_average,2)."  <br>
+            Homework Average: ".number_format($homework_average,2)."
+    "
+ ?>"
+                                            </p>
+                                            
                                         </div>
                                         <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
                                     </div>
