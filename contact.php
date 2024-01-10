@@ -2,7 +2,7 @@
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $mailFrom = $_POST['mail']; // corrected variable name
+    $mailFrom = $_POST['email']; // corrected variable name
     $numberForm = $_POST['phone']; // corrected variable name
     $message = $_POST['message'];
 
