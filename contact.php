@@ -7,8 +7,8 @@ $name = $_POST['name'];
   $message = $_POST['message'];
 
   $mailTo = "tylerlpowe@gmail.com";
-  $headers = "From: '.$mailFrom;
-  $txt = "You have a message ".$name".\n\n".$message'.$numberform;
+  $headers = "From: ".$mailFrom;
+  $txt = "You have a message."".$name".\n\n".$message'.$numberform;
 
   mail($mailTo, $name, $txt, $headers);
 
